@@ -1,0 +1,21 @@
+[project]
+name = "ai-backend"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115",
+  "uvicorn[standard]>=0.30",
+  "pydantic>=2.7",
+  "cerebras-cloud-sdk>=1.46",
+]
+
+[project.scripts]
+ai-backend = "ai_backend.server:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ai_backend*"]

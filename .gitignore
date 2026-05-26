@@ -394,3 +394,8 @@ $RECYCLE.BIN/
 *.msp
 *.lnk
 *.generated.props
+
+
+/tools/ai_backend/.env
+/tools/ai_backend/.venv
+/tools/ai_backend/ai_backend.egg-info

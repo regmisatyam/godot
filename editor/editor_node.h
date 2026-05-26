@@ -93,6 +93,7 @@ class EditorTitleBar;
 class ExportTemplateManager;
 class EditorQuickOpenDialog;
 class FBXImporterManager;
+class AIAssistantDock;
 class FileSystemDock;
 class HistoryDock;
 class OrphanResourcesDialog;
@@ -271,6 +272,7 @@ private:
 	EditorSelection *editor_selection = nullptr;
 	EditorSettingsDialog *editor_settings_dialog = nullptr;
 	HistoryDock *history_dock = nullptr;
+	AIAssistantDock *ai_assistant_dock = nullptr;
 
 	ProjectExportDialog *project_export = nullptr;
 	ProjectSettingsEditor *project_settings_editor = nullptr;

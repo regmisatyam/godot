@@ -83,6 +83,7 @@
 #include "editor/debugger/editor_debugger_node.h"
 #include "editor/debugger/script_editor_debugger.h"
 #include "editor/doc/editor_help.h"
+#include "editor/docks/ai_assistant_dock.h"
 #include "editor/docks/editor_dock_manager.h"
 #include "editor/docks/filesystem_dock.h"
 #include "editor/docks/groups_dock.h"
@@ -8970,6 +8971,9 @@ EditorNode::EditorNode() {
 	history_dock = memnew(HistoryDock);
 	editor_dock_manager->add_dock(history_dock);
 
+	ai_assistant_dock = memnew(AIAssistantDock);
+	editor_dock_manager->add_dock(ai_assistant_dock);
+
 	// Add some offsets to make LEFT_R and RIGHT_L docks wider than minsize.
 	const int dock_hsize = 280;
 	// By default there is only 3 visible, so set 2 split offsets for them.
@@ -8981,7 +8985,7 @@ EditorNode::EditorNode() {
 	const String docks_section = "docks";
 	default_layout.instantiate();
 	// Dock numbers are based on DockSlot enum value + 1.
-	default_layout->set_value(docks_section, "dock_3", "Scene,Import");
+	default_layout->set_value(docks_section, "dock_3", "AI Assistant,Scene,Import");
 	default_layout->set_value(docks_section, "dock_4", "FileSystem,History");
 	default_layout->set_value(docks_section, "dock_5", "Inspector,Signals,Groups");
 
